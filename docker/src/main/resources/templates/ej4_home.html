@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <title>Ejemplo 4</title>
+</head>
+<body>
+   <h1>Notice board</h1>
+   <h2>Welcome!</h2>
+          		
+               <div th:each="asunto : ${asuntoList}">
+				<a th:href="@{'/mostrar/' + ${asunto.nombre}}" 
+				   th:text="${'Nombre:'+asunto.nombre + ' Asunto' + asunto.asunto}">
+				</a>				  
+			 </div>	
+	<a href="new">New announcement</a>
+</body>
+</html>
